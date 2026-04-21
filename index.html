@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación GESS 2026 - Versión Mejorada</title>
+    <style>
+        /* Reset básico para asegurar consistencia */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fuentes más nítidas */
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px 0; /* Un poco de aire arriba y abajo */
+            color: #333;
+            -webkit-font-smoothing: antialiased; /* Suavizado de fuente en WebKit */
+        }
+        .external-table {
+            width: 100%;
+            background-color: #ffffff;
+		}
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        /* --- Header con logos AGRANDADOS --- */
+.header-logos {
+    display: flex;
+    justify-content: center; /* Cambiamos space-between por center para que se agrupen al medio */
+    align-items: center;
+    padding: 30px 20px;     /* Ajustamos el aire alrededor */
+}
+
+.logo-gess {
+    /* --- EL CONTROL DE TAMAÑO ES AQUÍ --- */
+    width: 100%;            /* Le dice a la imagen que intente usar todo el ancho disponible */
+    max-width: 300px;       /* ¡Este es el número mágico! Controla el tamaño máximo real. */
+    
+    /* --- Estilos necesarios para que funcione bien --- */
+    height: auto;           /* Mantiene la proporción para que no se vea estirada o aplastada */
+    display: block;          /* Convierte la imagen en un bloque para poder centrarla */
+    margin: 0 auto;         /* Centra la imagen horizontalmente */
+}
+
+        /* --- Títulos y Textos Superiores --- */
+        .header-text {
+            text-align: center;
+            padding: 0 40px; /* Aire lateral */
+        }
+
+        .title-badge {
+            background-color: #4caf50;
+            color: white;
+            padding: 6px 25px;
+            border-radius: 8px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 20px; /* Ligeramente más grande */
+            letter-spacing: 0.5px; /* Espaciado sutil */
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #1a5e20;
+            font-weight: 800;
+            font-size: 24px; /* Un punto más grande */
+            margin: 10px 0 15px 0;
+            text-transform: uppercase;
+            line-height: 1.0; /* Mejor interlineado para dos líneas */
+            letter-spacing: -0.5px; /* Más condensado, como la imagen */
+        }
+
+        .intro-text {
+            font-size: 14.5px;
+            line-height: 1.5; /* Interlineado cómodo para lectura */
+            padding: 0 20px;
+            color: #444;
+            margin-bottom: 25px;
+        }
+        .intro-text strong { color: #222; }
+
+        /* --- Cuadro de mensaje central: Más compacto --- */
+        .message-box {
+            border: 2px solid #8bc34a;
+            border-radius: 20px;
+            margin: 0 50px 25px 50px; /* Alineado con los textos */
+            padding: 18px 20px;
+            text-align: center;
+            color: #1a5e20;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1.1; /* Interlineado MUY compacto internamente */
+            letter-spacing: -0.2px;
+        }
+
+        /* --- Barra de Datos: Mejor alineación --- */
+        .info-bar {
+            background-color: #f1f8e9;
+            display: flex;
+            justify-content: space-around;
+            align-items: center; /* Centrado vertical de iconos y texto */
+            padding: 9px 15px;
+            font-size: 13.5px;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Más espacio entre icono y texto */
+            color: #2e7d32;
+        }
+
+        .info-item strong { color: #333; display: block; }
+        .info-item span.address { font-size: 11.5px; color: #555; line-height: 1.3; display: block; margin-top: 2px; }
+
+        /* Iconos como emojis para simplicidad, con ajuste de tamaño */
+        .icon { font-size: 18px; }
+
+        /* --- Agenda / Tabla: Compactada y ordenada --- */
+        .agenda-container {
+            margin: 0 25px 30px 25px; /* Aire lateral */
+            border: 1px solid #d4af37;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .agenda-header {
+            background-color: #e6ce00;
+            color: white;
+            text-align: center;
+            padding: 6px; /* Padding vertical reducido */
+            font-weight: bold;
+            font-size: 13.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .agenda-header-2 {
+            background-color: #a1c519;
+            color: white;
+            text-align: center;
+            padding: 6px; /* Padding vertical reducido */
+            font-weight: bold;
+            font-size: 13.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .agenda-content {
+            text-align: center;
+            padding: 12px 15px 5px 15px; /* Padding reducido */
+            font-size: 13px;
+        }
+
+        /* Estilos de texto específicos dentro de la agenda */
+        .person-block {
+            margin-bottom: 10px; /* Espacio ENTRE personas */
+            display: block;
+        }
+        .name { font-weight: bold; color: #222; }
+        .position { 
+            font-size: 12px; 
+            color: #666; 
+            display: block; 
+            line-height: 1.2; /* Interlineado compacto para cargos largos */
+            margin-top: 2px; 
+        }
+
+        /* Columnas de Líderes/Facilitadores */
+        .two-columns {
+            display: flex;
+            border-top: 1px solid #eee;
+        }
+
+        .column {
+            flex: 1;
+            padding: 12px 15px 5px 15px; /* Padding reducido */
+            text-align: center;
+        }
+
+        .col-title {
+            background-color: #f9f6cd;
+			color: #c0ca33;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13px;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+			display: block;
+            width: 100%;
+        }
+
+        /* --- Botón de Acción --- */
+        .cta-container {
+            text-align: center;
+            padding: 0 0 40px 0; /* Aire abajo */
+        }
+
+        .btn-confirm {
+            background-color: #4caf50;
+            color: white;
+            padding: 16px 45px;
+            border-radius: 35px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 19px;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" class="external-table">
+        <tr>
+            <td align="center">
+<div class="container">
+    <div class="header-logos">
+        <img src="https://s3-iimp-gestor-de-archivos-v3.s3.sa-east-1.amazonaws.com/boletines/images/IMG20260410_095852.png" alt="GESS 2026" class="logo-gess">
+    </div>
+
+    <div class="header-text">
+        <div style="font-size: 20px;" class="title-badge"><strong>INVITACIÓN AL TALLER Y NETWORKING</strong></div>
+        <h1 style="font-size: 20px;"class="subtitle">Rumbo al GESS 2026: Voces del territorio</h1>
+        <p style="font-size: 13px;"class="intro-text">
+            Te invitamos a participar en la primera sesión Rumbo al GESS 2026: Voces del territorio. 
+            Con el tema <strong>"Gestión Social 360°: Innovación, Confianza y Sostenibilidad en Acción"</strong>, buscamos promover el diálogo territorial y recoger perspectivas sobre el desarrollo social en el país.
+        </p>
+    </div>
+
+    <div style="line-height: 1.0;" class="message-box">
+        <div style="text-align: left; font-size: 13px;"><strong>HAGAMOS DE LA GESTIÓN SOCIAL</strong></div> <br>
+        <div style="text-align: right;"><span style="font-size: 13px; color: #4caf50;"><strong>UNA HERRAMIENTA DE DESARROLLO PARA EL PAÍS</strong></span></div>
+    </div>
+<div class="info-bar" style="background-color: #f1f8e9; padding: 9px 15px; text-align: center; margin-bottom: 25px; border-collapse: collapse;">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; border-collapse: collapse;">
+    <tr>
+      <td align="center" style="font-size: 13.5px; vertical-align: middle; padding: 10px 0;">
+        <img src="https://s3-iimp-gestor-de-archivos-v3.s3.sa-east-1.amazonaws.com/boletines/images/IMG20260413_161334.png" alt="[Fecha]" width="16" height="16" style="vertical-align: middle; margin-right: 5px;">
+        <span style="font-weight: bold; color: #333333; font-family: sans-serif;">Martes 28 de abril</span>
+      </td>
+      
+      <td align="center" style="font-size: 13.5px; vertical-align: middle; padding: 10px 0;">
+        <img src="https://s3-iimp-gestor-de-archivos-v3.s3.sa-east-1.amazonaws.com/boletines/images/IMG20260413_161348.png" alt="[Hora]" width="16" height="16" style="vertical-align: middle; margin-right: 5px;">
+        <span style="font-family: sans-serif; font-weight: bold; color: #333333;">7:00 p.m.</span>
+      </td>
+      
+      <td align="center" style="font-size: 13.5px; vertical-align: middle; padding: 10px 0; text-align: left; max-width: 250px;">
+        <table border="0" cellspacing="0" cellpadding="0"><tr>
+          <td valign="top" style="padding-top: 2px;">
+            <img src="https://s3-iimp-gestor-de-archivos-v3.s3.sa-east-1.amazonaws.com/boletines/images/IMG20260413_161405.png" alt="[Lugar]" width="16" height="16" style="vertical-align: top;">
+          </td>
+          <td style="padding-left: 5px; font-size: 13.5px; font-family: sans-serif;">
+            <div style="font-weight: bold; color: #333333;">Colegio de Ingenieros del Perú (CIP)</div>
+            <div style="font-size: 12px; color: #666666;">Av. Guillermo Prescott N°215, San Isidro.</div>
+          </td>
+        </tr></table>
+      </td>
+    </tr>
+  </table>
+</div>
+    
+
+    <div class="agenda-container">
+        <div class="agenda-header">INTRODUCCIÓN</div>
+        <div class="agenda-content">
+            <div class="person-block">
+                <span class="name">Edwin Chavarri</span>, decano del Consejo Departamental de Lima-Colegio de Ingenieros del Perú
+            </div>
+            <div class="person-block">
+                <span class="name">Juan Carlos Ortiz</span>, presidente del Instituto de Ingenieros de Minas del Perú
+            </div>
+            <div class="person-block">
+                <span class="name">Homar Lozano</span>, director del Instituto de Ingenieros de Minas del Perú
+            </div>
+        </div>
+
+        <div class="agenda-header">PRESENTACIÓN</div>
+        <div class="agenda-content">
+            <div class="person-block">
+                <span class="name">Jimena Sologuren</span>, copresidente del GESS 2026
+            </div>
+        </div>
+
+        <div class="agenda-header">Dinámica y distribución de grupos</div>
+        <div class="agenda-content">
+            <div class="person-block">
+			    <span class="name">Mario Huapaya</span>, director ejecutivo en Andean Link Engagement <br>
+                <span class="name">Claudia Del Pozo </span>, directora de Desarrollo Territorial en Andean Link Engagement
+            </div>
+        </div>
+
+        <div class="two-columns">
+            <div class="column" style="border-right: 1px solid #eee;">
+                <div class="col-title">LÍDERES</div>
+                <div class="person-block">
+                    <span style="font-size: 13.5px;" class="name">Analia Calmell Del Solar</span>
+                    <span class="position">Gerenta de Asuntos Institucionales y Sostenibilidad en CELEPSA</span>
+                </div>
+                <div class="person-block">
+                    <span style="font-size: 13.5px;" class="name">Ángel Rodríguez</span>
+                    <span class="position">Gerente de Sostenibilidad, Estrategia, Proyectos y Alianzas en Credicorp Perú</span>
+                </div>
+                <div class="person-block">
+                    <span style="font-size: 13.5px;" class="name">Bruno Morales</span>
+                    <span class="position">Director de Asuntos Corporativos en CETEMIN</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="col-title">FACILITADORES</div>
+                <div class="person-block">
+                    <span style="font-size: 13.5px;" class="name">Pamela Antonioli</span>
+                    <span class="position">Gerente General en Hub de Innovación Minera del Perú</span>
+                </div>
+                <div class="person-block">
+                    <span style="font-size: 13.5px;" class="name">Diana Prudencio</span>
+                    <span class="position">Gerenta del Programa de Inclusión Social, Educación y Salud en Care Perú</span>
+                </div>
+                <div class="person-block">
+                    <span style="font-size: 13.5px;" class="name">Wendy Retamozo</span>
+                    <span class="position">Coordinadora de Sostenibilidad e Innovación en Anglo American</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="agenda-header">PANEL DE CONCLUSIONES</div>
+		<div class="agenda-header-2">CÓCTEL Y NETWORKING</div>
+		
+    </div>
+
+    <div class="cta-container">
+        <a href="https://docs.google.com/forms/d/1JRtKzrxGQvTZtT19T-vsIUbe30b1LNfWn5Z0XaTsoKI/viewform?edit_requested=true" class="btn-confirm">
+            Confirma tu asistencia aquí 
+            
+        </a>
+    </div>
+</div>
+</td>
+        </tr>
+    </table>
+</body>
+</html>
