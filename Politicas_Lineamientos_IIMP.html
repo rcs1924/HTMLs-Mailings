@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Políticas y Lineamientos IIMP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- ESTILOS GENERALES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #000000; /* Texto base negro */
+            padding-bottom: 40px;
+        }
+
+        /* --- CABECERA (HEADER) --- */
+        .header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: #003366; /* Azul del menú original */
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        .nav-separator {
+            color: #003366;
+            font-weight: bold;
+        }
+
+        .btn-asociados {
+            background-color: #d4af37;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* --- LÍNEA DIVISORIA CORPORATIVA --- */
+        .divider {
+            width: 100%;
+            height: 2px;
+            background-color: #c8ab77; /* Beige solicitado */
+            margin-bottom: 50px;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .main-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        /* --- SECCIÓN DE TEXTO --- */
+        .text-section {
+            flex: 1;
+        }
+
+        .title {
+            color: #000000; /* Título negro solicitado */
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #333;
+            font-size: 1.1rem;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            max-width: 550px;
+        }
+
+        .download-title {
+            font-size: 1.3rem;
+            color: #000000; /* Negro solicitado */
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        /* --- LISTA DE DESCARGAS --- */
+        .download-list {
+            list-style: none;
+        }
+
+        .download-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .download-item:hover {
+            transform: translateX(5px);
+        }
+
+        .download-item i {
+            color: #c8ab77; /* Beige solicitado */
+            font-size: 1.2rem;
+            margin-right: 12px;
+        }
+
+        .download-item span {
+            color: #c8ab77; /* Beige solicitado */
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* --- SECCIÓN DE IMAGEN --- */
+        .image-section {
+            flex: 1;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        /* --- RESPONSIVIDAD (MÓVILES) --- */
+        @media (max-width: 900px) {
+            .header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .main-container {
+                flex-direction: column;
+                text-align: left;
+            }
+            .image-section {
+                order: -1;
+                width: 100%;
+            }
+            .title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="https://s3-iimp-gestor-de-archivos-v3.s3.sa-east-1.amazonaws.com/boletines/images/IMG20260416_133516.png" alt="Logo IIMP">
+        </div>
+        <nav class="nav">
+            <!--<a href="#" class="nav-item">Inicio</a>
+            <span class="nav-separator">|</span>
+            <a href="#" class="nav-item">Lista de Candidatos</a>
+            <span class="nav-separator">|</span> -->
+            <a href="https://iimp.org.pe/login" class="btn-asociados">
+                ASOCIADOS <i class="fa-solid fa-key"></i>
+            </a>
+        </nav>
+    </header>
+
+    <div class="divider"></div>
+
+    <div class="main-container">
+        
+        <div class="text-section">
+            <h1 class="title">Políticas y Lineamientos</h1>
+            
+            <p align="justify" class="description">
+                Nuestros códigos y procedimientos constituyen el marco normativo esencial 
+				para garantizar una gestión transparente dentro del IIMP, al cual se alinean 
+				nuestros asociados, colaboradores, proveedores y socios estratégicos. Con estos principios, 
+				fortalecemos nuestra institucionalidad y aseguramos un entorno de colaboración basado en la 
+				confianza y el respeto mutuo.<br>
+
+             
+            </p>
+
+            <h2 class="download-title">Revisa y descarga nuestros documentos institucionales:</h2>
+            
+            <nav class="download-list">
+                <a href="https://iimp.org.pe/publicaciones/estatuto_IIMP.pdf" class="download-item" target="_blank" alt="">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Estatuto del IIMP</span>
+                </a>
+				<a href="https://s3-iimp-gestor-de-archivos-v3.s3.sa-east-1.amazonaws.com/boletines/pdf/PDF20260422_195254.pdf" class="download-item" target="_blank" alt="">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Código de Conducta del IIMP</span>
+                </a>
+                <a href="https://s3-iimp-gestor-de-archivos-v3.s3.sa-east-1.amazonaws.com/boletines/pdf/PDF20260422_195554.pdf" class="download-item" target="_blank" alt="">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Código de Conducta para Aliados y Colaboradores</span>
+                </a>
+                <a href="https://s3-iimp-gestor-de-archivos-v3.s3.sa-east-1.amazonaws.com/boletines/pdf/PDF20260415_171417.pdf" class="download-item" target="_blank" alt="">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Código de Ética</span>
+                </a>
+                <a href="https://s3-iimp-gestor-de-archivos-v3.s3.sa-east-1.amazonaws.com/boletines/pdf/PDF20260422_195624.pdf" class="download-item" target="_blank" alt="">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Procedimiento de Denuncias Éticas y de Integridad</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="image-section">
+            <img src="https://s3-iimp-gestor-de-archivos-v3.s3.sa-east-1.amazonaws.com/boletines/noticias/images/imagenes/IMG20260416_124310.webp" 
+                 alt="Personal corporativo trabajando">
+        </div>
+
+    </div>
+
+</body>
+</html>
